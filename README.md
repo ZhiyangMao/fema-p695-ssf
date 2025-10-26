@@ -94,15 +94,6 @@ print("SSF (SaRatio):", model.SSF_SaRatio)
 
 ---
 
-## Contributing
-
-Contributions and issues are welcome.  
-Please keep:
-- the `src/` layout
-- the single top-level export (`FEMAP695SSF`)
-- minimal reproducible examples when possible
-
----
 
 ## License
 
