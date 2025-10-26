@@ -40,13 +40,7 @@ from fema_p695_ssf import FEMAP695SSF
 
 > Requires Python ≥3.9
 
-**From PyPI (recommended):**
-```bash
-pip install fema-p695-ssf
-```
-
----
-
+Please download the code from the git and build the environment using requirements.txt
 ## Quick Start
 
 ```python
