@@ -44,7 +44,7 @@ Please download the code from the git and build the environment using requiremen
 ## Quick Start
 
 ```python
-from fema_p695_ssf import FEMAP695SSF
+from SSF_calculation import FEMAP695SSF
 import pandas as pd
 
 # A two-column table [EQ_ID, Sac]
