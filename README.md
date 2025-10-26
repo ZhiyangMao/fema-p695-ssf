@@ -10,7 +10,7 @@ record-wise indices (ε(T), SaRatio), regressions, SSFs, and maximum-likelihood 
 The public API intentionally exposes a **single stable class** for users:
 
 ```python
-from fema_p695_ssf import FEMAP695SSF
+from SSF_calculation import FEMAP695SSF
 ```
 
 (Top-level API export defined in `src/fema_p695_ssf/__init__.py`.)
@@ -48,15 +48,15 @@ from SSF_calculation import FEMAP695SSF
 import pandas as pd
 
 # A two-column table [EQ_ID, Sac]
-Sac_Form = pd.read_csv("Sac_Form.csv")
+Sac_Form = pd.read_excel("Sac_Form.xlsx")
 
 model = FEMAP695SSF(
-    T=1.0,
-    longitude=-122.2, latitude=37.4,
-    Vs30=400,
-    return_period=2475,
-    a=0.2, b=1.5,
-    version="2023",  # "2008" or "2023"
+    T=1.12,
+    longitude=-118.25, latitude=34.05,
+    Vs30=259,
+    return_period=9950,
+    a=0.2, b=3,
+    version="2008",  # "2008" or "2023"
     Sac_Form=Sac_Form,
     region="california",
     mechanism="SS",
@@ -79,7 +79,8 @@ print("SSF (SaRatio):", model.SSF_SaRatio)
 - matplotlib
 - requests
 - statsmodels
-- pygmm *(or compatible GMM implementation)*
+- openpyxl
+- pygmm
 
 > Internet required for USGS APIs. Ensure longitude/latitude are valid for 2008 WUS or 2023 CONUS endpoints.
 
