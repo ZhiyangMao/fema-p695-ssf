@@ -52,21 +52,15 @@ Sac_Form = pd.read_excel("Example_Sac_NF.xlsx")
 
 model = FEMAP695SSF(
     T=1.12,
-    longitude=-118.25, latitude=34.05,
-    Vs30=259,
+    longitude=-118.25, latitude=34.05, # LA site
+    Vs30=259, # site class D
     return_period=9950,
     a=0.2, b=3,
     version="2008",  # "2008" or "2023"
     Sac_Form=Sac_Form,
-    region="california",
-    mechanism="SS",
-    Z10=-1
 )
 
-model.run_SSF()
-
-print("SSF (epsilon):", model.SSF_epsilon)
-print("SSF (SaRatio):", model.SSF_SaRatio)
+model.run()
 ```
 
 ---
@@ -89,7 +83,6 @@ print("SSF (SaRatio):", model.SSF_SaRatio)
 ## References
 
 - Baker, J. W., & Jayaram, N. (2008). *Earthquake Spectra* — Correlation of spectral acceleration values from NGA models.
-- Boore, D. M., Stewart, J. P., Seyhan, E., & Atkinson, G. M. (2014). *Earthquake Spectra* — NGA-West2 spectra equations.
 - FEMA P-695 (2009/2013). *Quantification of Building Seismic Performance Factors (P-695)*.
 
 ---
