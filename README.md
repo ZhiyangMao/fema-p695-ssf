@@ -48,7 +48,7 @@ from SSF_calculation import FEMAP695SSF
 import pandas as pd
 
 # A two-column table [EQ_ID, Sac]
-Sac_Form = pd.read_excel("Sac_Form.xlsx")
+Sac_Form = pd.read_excel("Example_Sac_NF.xlsx")
 
 model = FEMAP695SSF(
     T=1.12,
