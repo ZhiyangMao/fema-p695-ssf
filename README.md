@@ -57,7 +57,7 @@ model = FEMAP695SSF(
     return_period=9950,
     a=0.2, b=3,
     version="2008",  # "2008" or "2023"
-    Sac_Form=Sac_Form,
+    Sac_Form=Sac_Form
 )
 
 model.run()
